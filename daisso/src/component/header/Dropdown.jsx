@@ -18,7 +18,7 @@ function Dropdown() {
   return (
     <HeaderLi>
       <li onClick={() => navigate("/mypage")}>마이페이지</li>
-      <LogoutButton onClick={() => onLogout()}>로그아웃</LogoutButton>
+      <li onClick={() => onLogout()}>로그아웃</li>
     </HeaderLi>
   );
 }
