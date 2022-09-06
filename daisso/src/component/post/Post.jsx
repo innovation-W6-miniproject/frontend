@@ -4,6 +4,7 @@ import { PostBox, PostContent } from "./styles";
 
 function Post({ eachpost }) {
   const navigate = useNavigate();
+  const star = eachpost.star;
   return (
     <PostBox
       onClick={() => {
@@ -11,7 +12,7 @@ function Post({ eachpost }) {
       }}
     >
       <PostContent>
-        <img src={eachpost.productImg} width="200" height="200" />
+        <img src={eachpost.productUrl} width="200" height="200" />
         {/* DESC: productName이 199px을 넘어갈 경우 ... 으로 표시하고 가운데 정렬 */}
         <p
           style={{
@@ -24,7 +25,7 @@ function Post({ eachpost }) {
         >
           {eachpost.productName}
         </p>
-        <div>{eachpost.star}</div>
+        <div>{"⭐️".repeat(star)}</div>
       </PostContent>
     </PostBox>
   );
