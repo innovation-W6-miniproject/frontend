@@ -23,7 +23,7 @@ function PostModal() {
   };
 
   const likeBtnHandler = () => {
-    dispatch(__likesPost({ id: id, like: like })).then((res) => {
+    dispatch(__likesPost(id)).then((res) => {
       setHeart(res.payload.data);
     });
   };

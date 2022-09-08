@@ -43,7 +43,7 @@ export const __likesPost = createAsyncThunk("likesPost", async (payload, thunkAP
     axios.defaults.headers.common["refresh-token"] = refresh;
     console.log("??:", payload);
 
-    const data = await axios.post(REACT_APP_API_LIKES_URL + `/${payload.id}`);
+    const data = await axios.post(REACT_APP_API_LIKES_URL + `/${payload}`);
     return thunkAPI.fulfillWithValue(data.data);
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
